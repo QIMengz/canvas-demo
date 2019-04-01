@@ -7,12 +7,12 @@ listenToMouse(yyy)
 
 
 var eraserEnabled = false
-eraser.onclick = function () {
-  eraserEnabled = true
+eraser.onclick = function() {
+  eraserEnabled =true
   actions.className = 'actions x'
 
 }
-brush.onclick = function () {
+brush.onclick = function(){
   eraserEnabled = false
   actions.className = 'actions'
 }
@@ -23,7 +23,7 @@ brush.onclick = function () {
 function autoSetCanvasSize(canvas) {
   setCanvasSize()
 
-  window.onresize = function () {
+  window.onresize = function() {
     setCanvasSize()
   }
 
@@ -61,7 +61,7 @@ function listenToMouse(canvas) {
     x: undefined,
     y: undefined
   }
-  canvas.onmousedown = function (aaa) {
+  canvas.onmousedown = function(aaa) {
     var x = aaa.clientX
     var y = aaa.clientY
     using = true
@@ -74,11 +74,11 @@ function listenToMouse(canvas) {
       }
     }
   }
-  canvas.onmousemove = function (aaa) {
+  canvas.onmousemove = function(aaa) {
     var x = aaa.clientX
     var y = aaa.clientY
 
-    if (!using) { return }
+    if (!using) {return}
 
     if (eraserEnabled) {
       context.clearRect(x - 5, y - 5, 10, 10)
@@ -92,7 +92,7 @@ function listenToMouse(canvas) {
     }
 
   }
-  canvas.onmouseup = function (aaa) {
+  canvas.onmouseup = function(aaa) {
     using = false
   }
 }
