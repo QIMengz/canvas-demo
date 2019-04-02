@@ -21,6 +21,15 @@ eraser.onclick = function(){
 clear.onclick = function(){
   context.clearRect(0, 0, yyy.width, yyy.height);
 }
+download.onclick = function(){
+  var url = yyy.toDataURL("image/png")
+  var a = document.createElement('a')
+  document.body.appendChild(a)
+  a.href = url
+  a.download = '图画'
+  a.target = '_blank'
+  a.click()
+}
 black.onclick = function(){
   context.fillStyle = 'black'
   context.strokeStyle = 'black'

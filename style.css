@@ -1,12 +1,13 @@
+#xxx{
+  background: rgb(240, 240, 240);
+  display: block;
+}
 *{margin: 0;padding: 0;}
 ul,
 ol{
   list-style: none;
 }
-#xxx{
-  background: rgb(240, 240, 240);
-  display: block;
-}
+
 .icon {
   width: 1em; height: 1em;
   vertical-align: -0.15em;
