@@ -7,16 +7,16 @@ listenToUser(yyy)
 
 
 var eraserEnabled = false
-eraser.onclick = function() {
-  eraserEnabled =true
-  actions.className = 'actions x'
-
-}
-brush.onclick = function(){
+pen.onclick = function(){
   eraserEnabled = false
-  actions.className = 'actions'
+  pen.classList.add('active')
+  eraser.classList.remove('active')
 }
-
+eraser.onclick = function(){
+  eraserEnabled = true
+  eraser.classList.add('active')
+  pen.classList.remove('active')
+}
 
 /******/
 
