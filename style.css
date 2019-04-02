@@ -15,11 +15,8 @@ ol{
 }
 body{
   margin: 0px;
+  overflow: hidden;
 }
-
-html{
-}
-
 .actions{
   position: fixed;
   top: 0;
@@ -47,6 +44,7 @@ html{
   border-radius: 50%;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   margin: 15px 0;
+  transition: all 0.3s;
 }
 .colors> li.black{
   background: black;
