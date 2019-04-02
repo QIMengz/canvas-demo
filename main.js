@@ -17,6 +17,51 @@ eraser.onclick = function(){
   eraser.classList.add('active')
   pen.classList.remove('active')
 }
+black.onclick = function(){
+  context.fillStyle = 'black'
+  context.strokeStyle = 'black'
+  black.classList.add('active')
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  blue.classList.remove('active')
+  green.classList.remove('active')
+}
+red.onclick = function(){
+  context.fillStyle = 'red'
+  context.strokeStyle = 'red'
+  red.classList.add('active')
+  black.classList.remove('active')
+  yellow.classList.remove('active')
+  blue.classList.remove('active')
+  green.classList.remove('active')
+}
+yellow.onclick = function(){
+  context.fillStyle = 'yellow'
+  context.strokeStyle = 'yellow'
+  yellow.classList.add('active')
+  red.classList.remove('active')
+  black.classList.remove('active')
+  blue.classList.remove('active')
+  green.classList.remove('active')
+}
+blue.onclick = function(){
+  context.fillStyle = 'blue'
+  context.strokeStyle = 'blue'
+  blue.classList.add('active')
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  black.classList.remove('active')
+  green.classList.remove('active')
+}
+green.onclick = function(){
+  context.fillStyle = 'green'
+  context.strokeStyle = 'green'
+  green.classList.add('active')
+  red.classList.remove('active')
+  yellow.classList.remove('active')
+  blue.classList.remove('active')
+  black.classList.remove('active')
+}
 
 /******/
 
@@ -38,14 +83,12 @@ function autoSetCanvasSize(canvas) {
 
 function drawCircle(x, y, radius) {
   context.beginPath()
-  context.fillStyle = 'black'
   context.arc(x, y, radius, 0, Math.PI * 2);
   context.fill()
 }
 
 function drawLine(x1, y1, x2, y2) {
   context.beginPath();
-  context.strokeStyle = 'black'
   context.moveTo(x1, y1) // 起点
   context.lineWidth = 5
   context.lineTo(x2, y2) // 终点
@@ -69,7 +112,7 @@ function listenToUser(canvas) {
       var y = aaa.touches[0].clientY
       using = true
       if (eraserEnabled) {
-        context.clearRect(x - 5, y - 5, 10, 10)
+        context.clearRect(x - 10, y - 10, 20, 20)
       } else {
         lastPoint = {
           "x": x,
@@ -84,7 +127,7 @@ function listenToUser(canvas) {
       if (!using) {return}
   
       if (eraserEnabled) {
-        context.clearRect(x - 5, y - 5, 10, 10)
+        context.clearRect(x - 10, y - 10, 20, 20)
       } else {
         var newPoint = {
           "x": x,

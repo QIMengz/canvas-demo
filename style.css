@@ -1,3 +1,8 @@
+*{margin: 0;padding: 0;}
+ul,
+ol{
+  list-style: none;
+}
 #xxx{
   background: rgb(240, 240, 240);
   display: block;
@@ -19,12 +24,47 @@ html{
   position: fixed;
   top: 0;
   left: 0;
+  padding: 20px;
 }
 .actions svg{
   width: 1.8em;
   height: 1.8em;
+  transition: all 0.3s;
+  margin: 0 10px;
 }
 .actions svg.active{
   fill: orangered;
   transform: scale(1.2);
 }
+.colors{
+  position: fixed;
+  top: 60px;
+  left: 28px;
+}
+.colors> li{
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  margin: 15px 0;
+}
+.colors> li.black{
+  background: black;
+}
+.colors> li.red{
+  background: red;
+}
+.colors> li.yellow{
+  background: yellow;
+}
+.colors> li.blue{
+  background: blue;
+}
+.colors> li.green{
+  background: green;
+}
+.colors> li.active{
+  transform: scale(1.17);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+}
+
