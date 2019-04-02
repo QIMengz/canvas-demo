@@ -21,7 +21,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  padding: 20px;
+  padding: 15px;
 }
 .actions svg{
   width: 1.8em;
@@ -36,7 +36,7 @@ body{
 .colors{
   position: fixed;
   top: 60px;
-  left: 28px;
+  left: 20px;
 }
 .colors> li{
   width: 21px;
@@ -64,5 +64,23 @@ body{
 .colors> li.active{
   transform: scale(1.17);
   box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+}
+.sizes{
+  position: fixed;
+  right: 20px;
+  top: 10px;
+}
+.sizes > li{
+  margin: 15px 0;
+}
+.sizes > .thin{
+  height: 0;
+  width: 22px;
+  border-top: 3px solid black;
+}
+.sizes > .thick{
+  height: 0;
+  width: 22px;
+  border-top: 6px solid black;
 }
 
